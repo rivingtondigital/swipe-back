@@ -87,10 +87,13 @@ class QSet:
 #======================================================
 
 def list_sets(event, context):
-    categories = QSet.set_list()
+    data = {
+        'Sets': QSet.set_list()
+    }
+
     response = {
         "statusCode": 200,
-        "body": json.dumps(categories)
+        "body": json.dumps(data)
     }
 
     return response
